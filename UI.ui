@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Git и желтые окружности</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_generate">
+   <widget class="QPushButton" name="btn_paint">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Сгенерировать</string>
+     <string>Нарисовать</string>
     </property>
    </widget>
   </widget>
