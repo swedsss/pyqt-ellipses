@@ -1,15 +1,15 @@
 import sys
 from random import randint
 
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QPen, QColor
+from UI import Ui_MainWindow
 
 
-class MyWindow(QMainWindow):
+class MyWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
 
         self.paint = False
         self.ellipse_params = []
@@ -20,7 +20,7 @@ class MyWindow(QMainWindow):
         size = randint(10, min([self.width(), self.height()]))
         left = randint(0, self.width() - size)
         top = randint(0, self.height() - size)
-        color = QColor('yellow')
+        color = QColor(randint(0, 255), randint(0, 255), randint(0, 255))
         self.ellipse_params = [left, top, size, color]
         self.paint = True
         self.repaint()
